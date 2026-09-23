@@ -6,7 +6,7 @@ import { Magnetic } from "../components/Magnetic"
 import { Marquee } from "../components/Marquee"
 import { Reveal } from "../components/Reveal"
 import { Stage3D, TiltCard } from "../components/TiltCard"
-import { faqs, standards } from "../data/story"
+import { faqs, reviews, standards } from "../data/story"
 import { orderLink, products } from "../data/products"
 
 const rise = {
@@ -22,6 +22,7 @@ export function Home() {
       <Standards />
       <Ritual />
       <Bestsellers />
+      <Reviews />
       <Faq />
     </div>
   )
@@ -41,7 +42,7 @@ function Hero() {
             <span className="text-gold-gradient shine-sweep">back.</span>
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-forest/80">
-            A natural hair oil and a hair cream, made in Ghana.
+            A natural hair oil and a hair cream from Ghana, made to help your hair grow.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Magnetic>
@@ -63,8 +64,8 @@ function Hero() {
           </div>
           <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-forest/70">
             <span>100% natural</span>
-            <span>Made in Ghana</span>
-            <span>Hair Oil and 120g Cream</span>
+            <span>Once a day</span>
+            <span>Made for hair growth</span>
           </div>
         </motion.div>
 
@@ -102,7 +103,7 @@ function TrustStrip() {
     <Reveal delay={0.1} className="px-4 md:px-8">
       <div className="mx-auto max-w-[1400px] border-y border-forest/10 py-4">
         <Marquee
-          items={["100% Natural", "Made in Ghana", "FDA Listed", "Cruelty-Free Ritual", "Small Batch"]}
+          items={["Hair Growth", "Once a Day", "100% Natural", "Made in Ghana", "Fuller Hair", "FDA Listed"]}
         />
       </div>
     </Reveal>
@@ -152,10 +153,10 @@ function Standards() {
         <div className="bg-grain mx-auto grid max-w-[1400px] gap-6 overflow-hidden rounded-[28px] bg-gradient-to-br from-forest via-forest to-forest-deep px-4 py-6 text-white shadow-[0_30px_60px_-20px_rgba(12,40,28,0.5)] sm:px-6 sm:py-8 md:grid-cols-[1.15fr_0.85fr] md:gap-8 md:rounded-[40px] md:px-12 md:py-12">
           <div className="pr-14 md:pr-0">
             <h2 className="max-w-md font-display font-semibold tracking-[-0.02em] text-[clamp(1.9rem,6vw,4.2rem)] leading-[0.95]">
-              How we look after your hair.
+              Made for hair that wants to grow.
             </h2>
             <p className="mt-4 max-w-md text-white/75">
-              The ingredients are the ones printed on the pack. We use herbs and oils from Ghana, and we keep the routine simple.
+              Herbs and oils from Ghana, used once a day. The oil feeds the scalp. The cream is massaged through the hair. Both are made for growth.
             </p>
             <div className="mt-8 grid gap-6 sm:grid-cols-2">
               {standards.map((item, index) => (
@@ -175,7 +176,7 @@ function Standards() {
               <p className="text-xs font-medium tracking-[0.18em] text-forest uppercase">How to use</p>
               <h3 className="mt-2 font-display text-2xl font-semibold tracking-tight">Hair Oil and Hair Cream.</h3>
               <p className="mt-2 text-sm leading-relaxed text-ink/65">
-                Warm the oil into the scalp and through the hair. Massage the cream in twice a day.
+                Use each one once a day. Warm the oil into the scalp. Massage the cream through the hair.
               </p>
             </div>
             <ProductFlip />
@@ -217,10 +218,10 @@ function Ritual() {
           <div>
             <p className="text-sm font-medium text-forest">The story</p>
             <h2 className="mt-3 max-w-lg font-display font-semibold tracking-[-0.015em] text-[clamp(2.2rem,4.5vw,3.8rem)] leading-[0.98]">
-              Hair that gets its bounce back.
+              Hair that grows its bounce back.
             </h2>
             <p className="mt-4 max-w-md leading-relaxed text-ink/70">
-              Made in Ghana by Mabvin Ventures. Hair Oil is castor, argan, coconut, and herbs. Hair Cream is moringa, neem, hibiscus, and shea butter.
+              Made in Ghana by Mabvin Ventures for hair growth. Use each product once a day. Hair Oil is castor, argan, coconut, and herbs. Hair Cream is moringa, neem, hibiscus, and shea butter.
             </p>
             <Magnetic strength={10} className="mt-6">
               <Link
@@ -283,6 +284,36 @@ function Bestsellers() {
                   <p className="mt-2 max-w-sm text-sm leading-relaxed text-ink/65">{product.tagline}</p>
                 </Link>
               </TiltCard>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function Reviews() {
+  return (
+    <section className="px-4 py-8 md:px-8 md:py-14">
+      <div className="mx-auto max-w-[1400px]">
+        <Reveal>
+          <p className="text-xs font-medium tracking-[0.22em] text-forest uppercase">Reviews</p>
+          <h2 className="mt-3 max-w-xl font-display font-semibold tracking-[-0.02em] text-[clamp(2.2rem,4vw,3.6rem)] leading-[0.98]">
+            Fuller hair, from people who use it once a day.
+          </h2>
+        </Reveal>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {reviews.map((review, index) => (
+            <Reveal key={`${review.product}-${review.place}`} delay={index * 0.06} className="h-full">
+              <article className="flex h-full flex-col rounded-[28px] bg-white p-6 ring-1 ring-black/5">
+                <p className="text-gold" aria-label="5 stars">
+                  ★★★★★
+                </p>
+                <p className="mt-3 leading-relaxed text-ink/80">{review.quote}</p>
+                <p className="mt-5 text-sm font-medium text-forest">
+                  {review.product}, {review.place}
+                </p>
+              </article>
             </Reveal>
           ))}
         </div>

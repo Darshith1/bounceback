@@ -11,11 +11,16 @@ export function Products() {
         <Reveal>
           <p className="text-xs font-medium tracking-[0.22em] text-forest uppercase">Catalog</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
-            <h1 className="font-display font-semibold leading-[0.9] tracking-[-0.02em] text-[clamp(2.4rem,8vw,6rem)]">
-              Hair oil.
-              <br />
-              Hair cream.
-            </h1>
+            <div>
+              <h1 className="font-display font-semibold leading-[0.9] tracking-[-0.02em] text-[clamp(2.4rem,8vw,6rem)]">
+                Hair oil.
+                <br />
+                Hair cream.
+              </h1>
+              <p className="mt-4 max-w-md text-lg leading-relaxed text-ink/70">
+                Two products for hair growth. Use each one once a day.
+              </p>
+            </div>
             <Magnetic strength={10}>
               <a
                 href={orderLink()}

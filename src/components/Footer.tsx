@@ -5,6 +5,7 @@ const pages = [
   { to: "/", label: "Home" },
   { to: "/story", label: "Story" },
   { to: "/products", label: "Products" },
+  { to: "/careers", label: "Careers" },
 ]
 
 export function Footer() {
@@ -15,7 +16,7 @@ export function Footer() {
           <div>
             <img src="/brand/logo-gold.png" alt="Bounce Back cosmetics" className="h-12 w-auto" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/75">
-              A hair oil and a hair cream, made in Ghana.
+              A hair oil and a hair cream for growth, made in Ghana. Used once a day.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-white/90">
               {brand.producer}

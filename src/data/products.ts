@@ -36,13 +36,14 @@ export const products: Product[] = [
     name: "Hair Oil",
     size: "Dropper bottle",
     badge: "100% natural",
-    tagline: "Made especially for your precious hair.",
+    tagline: "Once a day, for hair that wants to grow.",
     summary:
-      "100% natural hair oil made from natural herbs and extracts, made especially for your precious hair.",
+      "100% natural hair oil made from natural herbs and extracts, made especially for your precious hair. Warm it into the scalp once a day to support growth.",
     ingredients: ["Castor oil", "Argan oil", "Olive oil", "Coconut oil", "Mixed herbs"],
     directions: [
       "Warm a few drops between your palms.",
       "Massage into the scalp and through the lengths.",
+      "Use once a day.",
     ],
     hero: "/products/cutouts/hair-oil-float.png",
     gallery: [
@@ -56,10 +57,10 @@ export const products: Product[] = [
     slug: "hair-cream",
     name: "Hair Cream",
     size: "120g",
-    badge: "Twice daily",
-    tagline: "Massage into scalp and hair.",
+    badge: "Once a day",
+    tagline: "Massage in once a day for growth.",
     summary:
-      "A 120g cream with moringa, neem, rosemary, hibiscus, and shea butter. Massage it into the scalp and hair two times a day.",
+      "A 120g cream with moringa, neem, rosemary, hibiscus, and shea butter. Massage it into the scalp and hair once a day to help hair grow fuller.",
     ingredients: [
       "Moringa powder",
       "Neem powder",
@@ -75,7 +76,7 @@ export const products: Product[] = [
     directions: [
       "Take a small amount and warm it in your hands.",
       "Massage thoroughly into the scalp and hair.",
-      "Use two times daily. Store in a cool, dry place.",
+      "Use once a day. Store in a cool, dry place.",
     ],
     hero: "/products/cutouts/hair-cream-black-front.png",
     gallery: [

@@ -14,7 +14,7 @@ export function Story() {
             Hair that gets its bounce back.
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink/70">
-            Bounce Back is a hair care line from {brand.producer} in Ghana. Hair Oil and Hair Cream each have their own ingredients, printed on the pack.
+            Bounce Back is a hair care line from {brand.producer} in Ghana, made for hair growth. Hair Oil and Hair Cream are each used once a day. Every ingredient is printed on the pack.
           </p>
         </Reveal>
 
