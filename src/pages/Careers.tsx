@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react"
+import { useState, type FormEvent } from "react"
 import { Reveal } from "../components/Reveal"
 
 const CAREERS_EMAIL = "xcellentdesign76@gmail.com"
